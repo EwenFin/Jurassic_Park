@@ -8,4 +8,8 @@ describe("Jurassic Park", function(){
 
   });
 
+  it("Park starts empty", function(){
+    assert.strictEqual(0, park.enclosure.length)
+  })
+
 });
