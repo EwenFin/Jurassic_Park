@@ -16,5 +16,9 @@ describe("Dinosaur", function(){
     assert.strictEqual("T-Rex", dinosaur1.type);
   });
 
+  it("Dinosaur has offspringRate", function(){
+    assert.strictEqual(4, dinosaur2.offspringRate);
+  })
+
 
 });
