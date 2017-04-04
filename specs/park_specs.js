@@ -29,13 +29,21 @@ describe("Jurassic Park", function(){
   });
 
   it("Park can remove Dinos by type", function(){
-    park.addDinosaur(dinosaur1)
+    park.addDinosaur(dinosaur1);
     park.addDinosaur(dinosaur2);
     park.addDinosaur(dinosaur2);
     park.addDinosaur(dinosaur3);
     park.removeDinosaurByType(dinosaur2);
     assert.strictEqual(2, park.enclosure.length);
   });
+
+  it("Park can get Dinos with offspringRate >= 2", function(){
+    park.addDinosaur(dinosaur1);
+    park.addDinosaur(dinosaur2);
+    park.addDinosaur(dinosaur3);
+    assert.strictEqual(2, park.getDinosOffspringCount2OrMore().length);
+
+  })
 
 
 
